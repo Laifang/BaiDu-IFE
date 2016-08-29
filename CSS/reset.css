@@ -1,0 +1,64 @@
+/* @group reset defalut sylte of the use agent
+	@author LaiFang
+	#data-time 2016-8-24 8:57:44
+------------------------------------------------------------*/
+/*reset margin and oadding*/
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,
+dl,dt,dd,ul,ol,li,
+pre,
+fieldset,legend,button,input,textarea,
+th,td{
+	margin: 0;
+	padding: 0;
+}
+/*reset font */
+body,
+button,input,select,textarea{
+	font:12px/1 Tahoma,Helvetica,Arial,"Microsoft Yahei","SimSun","sans-serif";/*SimSun 宋体*/
+}
+
+/* reset font-size*/
+h1{font-size:18px;}
+h2{font-size: 16px;}
+h3{font-size: 14px;}
+h4,h5,h6{font-size: 100%;}
+
+/*reset list style*/
+ul,ol{
+	list-style: none;
+}
+
+/*reset q qutoe to none*/
+q:before,q:after{
+	content: "";
+}
+
+/*reset table collapse*/
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*set html5 new elements display block*/
+header,
+footer,
+section,
+figure,
+nav,
+{
+	display: block;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.clearfix:after{
+	content: "";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
