@@ -179,32 +179,32 @@ body {
     }  */
 
 
-    /*设置根list.menu-item 的 padding 给图标留下位置*/
+/*设置根list.menu-item 的 padding 给图标留下位置*/
 
-    .common-aside .menu-list>li>.menu-item-title {
-        padding-left: 25px;
-    }
-
-
-    /*设置子menu-list-* 的padding 给图标留下位置*/
-
-    .common-aside .menu-list [class*="menu-list-"] .menu-item-title {
-        padding-left: 16px;
-    }
+.common-aside .menu-list>li>.menu-item-title {
+    padding-left: 25px;
+}
 
 
-    /*设置子menu-list-* 下的a.ico-folder的padding 给两个图标留下位置*/
+/*设置子menu-list-* 的padding 给图标留下位置*/
 
-    .common-aside .menu-list [class*="menu-list-"] .ico-folder {
-        padding-left: 32px;
-    }
+.common-aside .menu-list [class*="menu-list-"] .menu-item-title {
+    padding-left: 16px;
+}
 
 
-    /*通过直接后代选择器,设置被'激活' 的根li.menu-item元素的背景高亮显示*/
+/*设置子menu-list-* 下的a.ico-folder的padding 给两个图标留下位置*/
 
-    .common-aside .menu-list>li.active {
-        background: #383d4e;
-    }
+.common-aside .menu-list [class*="menu-list-"] .ico-folder {
+    padding-left: 32px;
+}
+
+
+/*通过直接后代选择器,设置被'激活' 的根li.menu-item元素的背景高亮显示*/
+
+.common-aside .menu-list>li.active {
+    background: #383d4e;
+}
 
 
 /*--------------------------------------------------------
@@ -255,112 +255,271 @@ body {
     background: #eee;
 }
 
-
-.index-main .index-nav{
+.index-main .index-nav {
     width: 100%;
     height: 32px;
     background: #fff;
-    
 }
-.index-main .index-nav .nav-title 
-{
+
+.index-main .index-nav .nav-title {
     margin-left: 30px;
     font-size: 12px;
     color: #aaa;
     line-height: 32px;
 }
-.index-main .index-nav .nav-title a{
+
+.index-main .index-nav .nav-title a {
     color: #aaa;
 }
-.index-main .index-nav .nav-title a:hover{
+
+.index-main .index-nav .nav-title a:hover {
     color: #d04b37;
 }
-.index-main .index-nav .nav-title .mark-now{
+
+.index-main .index-nav .nav-title .mark-now {
     color: #6898c2;
 }
 
-.index-main-wrap{
+.index-main-wrap {
     width: 890px;
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.shadow{
+.shadow {
     box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
 }
 
-.index-search-info{
+
+/*index search info 部分*/
+
+.index-search-info {
+    margin-bottom: 10px;
+    /*width: 100%;*/
     height: 55px;
     border: 1px solid #ccc;
     padding: 15px;
     background: #fff;
-    
     color: #aaa;
 }
 
-.option-wrap{
+.option-wrap {
     position: relative;
     float: left;
     margin-right: 35px;
 }
 
-.option-wrap label{
+.option-wrap label {
     display: inline-block;
     /*margin-right: 15px;*/
 }
-/*.option-wrap option{
-    display: inline-block;
-    text-indent: 100em;
-}*/
 
-.option-wrap select,
-.option-wrap input[type="text"]{
+.option-wrap select, .option-wrap input[type="text"] {
     margin-left: 15px;
     border: 1px solid #ccc;
     text-indent: 0.5em;
     height: 25px;
 }
 
-.label-option-01 select,
-.label-option-05 select,
-.label-option-06 select{
+.label-option-01 select, .label-option-05 select, .label-option-06 select {
     width: 70px;
 }
 
-.label-option-02 select,
-.label-option-03 select,
-.label-option-07 select{
+.label-option-02 select, .label-option-03 select, .label-option-07 select {
     width: 120px;
 }
 
-.label-option-03,
-.label-option-06,
-.label-option-07{
+.label-option-03, .label-option-06, .label-option-07 {
     margin-top: 5px;
 }
 
-.ico-replace{
+#option-wrap-2 {
+    margin-right: 50px;
+}
+
+.ico-replace {
     position: absolute;
     top: 10px;
     right: -25px;
 }
 
-.label-option-04,
-.label-option-06{
+.label-option-04, .label-option-06 {
     margin-right: 15px;
 }
 
-.index-search-info .btn-search{
+.index-search-info .btn-search {
     margin-top: 12.5px;
     width: 50px;
     height: 25px;
-    
     color: #fff;
-
     background: #2189bf;
     outline: none;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+}
+
+
+/*index-search-history 部分*/
+
+.index-search-history {
+    /*width: 100%;*/
+    height: 85px;
+    background: transparent;
+}
+
+/*设置整体模块左浮动*/
+
+.index-search-history .navbar, .index-search-history .navbar .navbar-item, .index-search-history .navbar a, .index-search-history .history-search {
+    float: left;
+}
+
+/*设置模块通用属性*/
+
+.index-search-history .navbar a, .index-search-history .navbar div, .index-search-history .history-search {
+    height: 83px;
+    margin-right: 5px;
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+}
+
+/*单独设置每种模块的宽度*/
+
+.index-search-history .navbar .navbar-item {
+    width: 108px;
+}
+
+.index-search-history .navbar a {
+    width: 28px;
+}
+
+.index-search-history .history-search {
+    width: 128px;
+    margin-right: 0;
+}
+
+/*设置 navbar-item 的样式*/
+
+.navbar .navbar-item h4{
+  margin-top: 15px;
+  font-size: 12px;
+  color: #323333;
+}
+
+.navbar .navbar-item p{
+  margin-top: 12px;
+  font-size: 21px;
+  color: #ec6500;
+}
+.navbar .navbar-item p .unit{
+  font-size: 12px;
+  color: #ccc;
+}
+.navbar div.active{
+  border-top: 4px solid #4388c9;
+  height: 80px;
+}
+
+/*.navbar .navbar-item:hover{
+  border-top: 4px solid #4388c9;
+  height: 80px;
+}*/
+
+.navbar a.navbar-arrow-l{
+  background: #fff url(../img/index-main-arrow-l.png) no-repeat center;
+
+}
+.navbar a.navbar-arrow-r{
+  background: #fff url(../img/index-main-arrow-r.png) no-repeat center;
+}
+
+.index-search-history .history-search .ico-history{
+  float: left;
+
+  height: 32px;
+  width: 32px;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.index-search-history .history-search h4{
+  float: left;
+  margin-left: 10px;
+  line-height: 85px;
+}
+
+/*index-report-count 部分*/
+
+.index-report-count .count-title{
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.index-report-count .count-item{
+  float: left;
+  margin-right: 26px;
+  width: 198px;
+  height: 70px;
+  box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.index-report-count .count-item:last-of-type{
+  margin-right: 0;
+}
+
+.index-report-count  .item-1{
+  border-left: 4px solid #43b29e;
+}
+.index-report-count  .item-2{
+  border-left: 4px solid #388ac1;
+}
+.index-report-count  .item-3{
+  border-left: 4px solid #d04b36;
+}
+.index-report-count  .item-4{
+  border-left: 4px solid #e2cd47;
+}
+
+.index-report-count .count-item .count-item-title{
+
+  margin-left: 8px;
+  margin-top: 20px;
+
+  font-size: 12px;
+  color: #323333;
+}
+.index-report-count .count-item .count-item-content{
+
+  margin-top: 12px;
+  margin-left: 8px;
+
+  font-size: 10px;
+  color: #aaa;
+}
+.index-report-count .count-item .ico-box{
+  float: right;
+  width: 60px;
+  height: 42px;
+
+  margin-right: 15px;
+  margin-top: 10px;
+  background: #aaa;
+}
+
+.index-report-count .count-item .box-1{
+  background: #43b29e;
+}
+.index-report-count .count-item .box-2{
+  background: #388ac1;
+}
+.index-report-count .count-item .box-3{
+  background: #d04b36;
+}
+.index-report-count .count-item .box-4{
+  background: #e2cd47;
 }

@@ -84,7 +84,7 @@
 		<div class="index-main-wrap">
 			<div class="index-search-info shadow">
 				<form action="#">
-					<div class="option-wrap">
+					<div class="option-wrap" id="option-wrap-1">
 						<label class="label-option-01">
 							<span>查询项</span>
 							<select name="option-01" id="">
@@ -94,7 +94,7 @@
 							</select>
 						</label>
 					</div>
-					<div class="option-wrap">
+					<div class="option-wrap" id="option-wrap-2">
 						<label class="label-option-02">
 							<span>买方</span>
 							<select name="option-02" id="">
@@ -114,7 +114,7 @@
 						</label>
 						<a href="#"><img class="ico-replace" src="img/index-main-replace.png" alt="置换"></a>
 					</div>
-					<div class="option-wrap">
+					<div class="option-wrap" id="option-wrap-3">
 						<label class="label-option-04">
 							<span>日期</span>
 							<input type="text" name="search-date" value="2016-04-01">
@@ -137,7 +137,7 @@
 						<label class="label-option-06">
 							<span>人数</span>
 							<select name="option-06" id="">
-								
+
 								<option value="">4&nbsp;人</option>
 								<option value="">5&nbsp;人</option>
 								<option value="">6&nbsp;人</option>
@@ -151,14 +151,14 @@
 						<label class="label-option-07">
 							<span>成交项</span>
 							<select name="option-07" id="">
-								<option value="">4&nbsp;人</option>
-								<option value="">5&nbsp;人</option>
-								<option value="">6&nbsp;人</option>
-								<option value="">7&nbsp;人</option>
-								<option value="">8&nbsp;人</option>
-								<option value="">9&nbsp;人</option>
-								<option value="" selected>10&nbsp;人</option>
-								<option value="">11&nbsp;人</option>
+								<option value="">4&nbsp;项</option>
+								<option value="">5&nbsp;项</option>
+								<option value="">6&nbsp;项</option>
+								<option value="">7&nbsp;项</option>
+								<option value="">8&nbsp;项</option>
+								<option value="">9&nbsp;项</option>
+								<option value="" selected>10&nbsp;项</option>
+								<option value="">11&nbsp;项</option>
 							</select>
 						</label>
 					</div>
@@ -166,20 +166,81 @@
 				</form>
 			</div>
 
-			<div class="index-search-history shadow">
+			<div class="index-search-history">
+				<div class="navbar">
+					<a href="#" class="navbar-arrow-l"></a>
 
+					<div class="navbar-item active">
+						<h4>07:00 am</h4>
+						<p><span class="unit">￥</span>1100</p>
+					</div>
+					<div class="navbar-item">
+						<h4>08:00 am</h4>
+						<p><span class="unit">￥</span>1200</p>
+					</div>
+					<div class="navbar-item">
+						<h4>09:00 am</h4>
+						<p><span class="unit">￥</span>1300</p>
+					</div>
+					<div class="navbar-item">
+						<h4>10:00 am</h4>
+						<p><span class="unit">￥</span>1400</p>
+					</div>
+					<div class="navbar-item">
+						<h4>11:00 am</h4>
+						<p><span class="unit">￥</span>1500</p>
+					</div>
+					<div class="navbar-item">
+						<h4>12:00 am</h4>
+						<p><span class="unit">￥</span>1600</p>
+					</div>
+
+					<a href="#" class="navbar-arrow-r"></a>
+				</div>
+
+				<div class="history-search">
+					<img class="ico-history" src="img/index-main-history.png" alt="历史查询">
+					<h4>历史查询</h4>
+				</div>
 			</div>
 
-			<div class="index-report-count shadow"></div>
-			
+			<div class="index-report-count">
+					<h4 class="count-title">2016年4月份统计</h4>
+					<div class="count-wrap">
+						<div class="count-item item-1">
+							<div class="ico-box box-1"></div>
+							<h4 class="count-item-title">133311</h4>
+							<p class="count-item-content">成交量</p>
+						</div>
+						<div class="count-item item-2">
+							<div class="ico-box box-2"></div>
+							<h4 class="count-item-title">133311</h4>
+							<p class="count-item-content">成交量</p>
+						</div>
+						<div class="count-item item-3">
+							<div class="ico-box box-3"></div>
+							<h4 class="count-item-title">133311</h4>
+							<p class="count-item-content">成交量</p>
+						</div>
+						<div class="count-item item-4">
+							<div class="ico-box box-4"></div>
+							<h4 class="count-item-title">133311</h4>
+							<p class="count-item-content">成交量</p>
+						</div>
+					</div>
+			</div>
+
 			<div class="index-project-view shadow"></div>
-			
+
 			<div class="index-project-detail shadow"></div>
-			
+
 			<div class="index-calender shadow"></div>
-			
+
 			<div class="index-charts shadow"></div>
+
 		</div>
+
+
 
 	</div>
 </body>
