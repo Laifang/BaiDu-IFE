@@ -153,7 +153,7 @@ body {
 
 /*设置子ul列表的左边距 和上边距*/
 
-.common-aside .menu-list ul[class*="menu-list-"] {
+.common-aside .menu-list [class*="menu-list-"] {
     margin-left: 25px;
     margin-top: 20px;
 }
@@ -176,35 +176,35 @@ body {
 /* 无效
 .common-aside .menu-list .menu-item{
 	margin-bottom: 20px;
-}  */
+    }  */
 
 
-/*设置根list.menu-item 的 padding 给图标留下位置*/
+    /*设置根list.menu-item 的 padding 给图标留下位置*/
 
-.common-aside .menu-list>li>.menu-item-title {
-    padding-left: 25px;
-}
-
-
-/*设置子menu-list-* 的padding 给图标留下位置*/
-
-.common-aside .menu-list [class*="menu-list-"] .menu-item-title {
-    padding-left: 16px;
-}
+    .common-aside .menu-list>li>.menu-item-title {
+        padding-left: 25px;
+    }
 
 
-/*设置子menu-list-* 下的a.ico-folder的padding 给两个图标留下位置*/
+    /*设置子menu-list-* 的padding 给图标留下位置*/
 
-.common-aside .menu-list [class*="menu-list-"] .ico-folder {
-    padding-left: 32px;
-}
+    .common-aside .menu-list [class*="menu-list-"] .menu-item-title {
+        padding-left: 16px;
+    }
 
 
-/*通过直接后代选择器,设置被'激活' 的根li.menu-item元素的背景高亮显示*/
+    /*设置子menu-list-* 下的a.ico-folder的padding 给两个图标留下位置*/
 
-.common-aside .menu-list>li.active {
-    background: #383d4e;
-}
+    .common-aside .menu-list [class*="menu-list-"] .ico-folder {
+        padding-left: 32px;
+    }
+
+
+    /*通过直接后代选择器,设置被'激活' 的根li.menu-item元素的背景高亮显示*/
+
+    .common-aside .menu-list>li.active {
+        background: #383d4e;
+    }
 
 
 /*--------------------------------------------------------
@@ -247,9 +247,120 @@ body {
 
 /*main 部分*/
 
-.main {
+.index-main {
+    position: relative;
     float: left;
-    width: 79.9%;
+    width: 80%;
     height: 1200px;
     background: #eee;
+}
+
+
+.index-main .index-nav{
+    width: 100%;
+    height: 32px;
+    background: #fff;
+    
+}
+.index-main .index-nav .nav-title 
+{
+    margin-left: 30px;
+    font-size: 12px;
+    color: #aaa;
+    line-height: 32px;
+}
+.index-main .index-nav .nav-title a{
+    color: #aaa;
+}
+.index-main .index-nav .nav-title a:hover{
+    color: #d04b37;
+}
+.index-main .index-nav .nav-title .mark-now{
+    color: #6898c2;
+}
+
+.index-main-wrap{
+    width: 890px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shadow{
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+}
+
+.index-search-info{
+    height: 55px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background: #fff;
+    
+    color: #aaa;
+}
+
+.option-wrap{
+    position: relative;
+    float: left;
+    margin-right: 35px;
+}
+
+.option-wrap label{
+    display: inline-block;
+    /*margin-right: 15px;*/
+}
+/*.option-wrap option{
+    display: inline-block;
+    text-indent: 100em;
+}*/
+
+.option-wrap select,
+.option-wrap input[type="text"]{
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    text-indent: 0.5em;
+    height: 25px;
+}
+
+.label-option-01 select,
+.label-option-05 select,
+.label-option-06 select{
+    width: 70px;
+}
+
+.label-option-02 select,
+.label-option-03 select,
+.label-option-07 select{
+    width: 120px;
+}
+
+.label-option-03,
+.label-option-06,
+.label-option-07{
+    margin-top: 5px;
+}
+
+.ico-replace{
+    position: absolute;
+    top: 10px;
+    right: -25px;
+}
+
+.label-option-04,
+.label-option-06{
+    margin-right: 15px;
+}
+
+.index-search-info .btn-search{
+    margin-top: 12.5px;
+    width: 50px;
+    height: 25px;
+    
+    color: #fff;
+
+    background: #2189bf;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
