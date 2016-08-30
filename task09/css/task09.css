@@ -189,7 +189,7 @@ body{
 }
 .common-aside .menu-list .ico-folder{
 	background: url(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px,
-				url(../img/aside-folder-ico.png) no-repeat 16px 0;
+				url(../img/aside-folder-ico.png) no-repeat 16px -2px;
 }
 .common-aside .menu-list .ico-file{
 	background: url(../img/aside-file-ico.png) no-repeat 0 -2px;
