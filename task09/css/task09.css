@@ -1,5 +1,7 @@
 body{
-	min-width: 1280px;
+	/*min-width: 1280px;*/
+	width: 1280px;
+	margin: 0 auto;
 	/*font-family: "SimHei";*/
 	background-color: #aaa;
 }
@@ -17,7 +19,7 @@ body{
 	float: left;
 	height: 36px;
 	width: 36px;
-	margin-left: 50px; 
+	margin-left: 50px;
 	margin-top: 10px;
 	background: url(../img/logo.png) no-repeat center;
 }
@@ -118,7 +120,7 @@ body{
 
 /*
 -------------------------------------------------------
-为了达到设计稿中的背景覆盖面 ，不使用ul的margin 
+为了达到设计稿中的背景覆盖面 ，不使用ul的margin
 而是使用.menu-item 的padinng来增加每一个根list的background覆盖面
 下面一些列选择器的设置都是为了下一步方便后端进行循环
 ----------------------------------------------------------
@@ -136,12 +138,12 @@ body{
 	margin-top: 20px;
 }
 /*设置 子列表下的li.item 的下边距*/
-.common-aside .menu-list ul[class*="menu-list-"]>li{
+.common-aside .menu-list [class*="menu-list-"]>li{
 	margin-bottom: 20px;
 }
 
 /*设置 最后一个子列表下的最后一个li.item 的下边归零，实现排版目的*/
-.common-aside .menu-list ul[class*="menu-list-"]:last-of-type>li:last-of-type{
+.common-aside .menu-list [class*="menu-list-"]:last-of-type>li:last-of-type{
 	margin-bottom: 0px;
 }
 
@@ -152,54 +154,54 @@ body{
 }  */
 
 /*设置根list.menu-item 的 padding 给图标留下位置*/
-.common-aside .menu-list>li>a.menu-item-title{
+.common-aside .menu-list>li>.menu-item-title{
 	padding-left: 25px;
 }
 
 
 /*设置子menu-list-* 的padding 给图标留下位置*/
-.common-aside .menu-list ul[class*="menu-list-"] a.menu-item-title{
+.common-aside .menu-list [class*="menu-list-"] .menu-item-title{
 	padding-left: 16px;
 }
 /*设置子menu-list-* 下的a.ico-folder的padding 给两个图标留下位置*/
-.common-aside .menu-list ul[class*="menu-list-"] a.ico-folder{
+.common-aside .menu-list [class*="menu-list-"] .ico-folder{
 	padding-left: 32px;
 }
 
 
 /*通过直接后代选择器,设置被'激活' 的根li.menu-item元素的背景高亮显示*/
-.common-aside .menu-list>li[class*="active"]{
+.common-aside .menu-list>li.active{
 	background: #383d4e;
 }
 
 /*--------------------------------------------------------
 通过选择器的多重组合 精确定位被标记为active的li 下的 a.menu-item-title，使其高亮显示
 -------------------------------------------------------*/
-.common-aside .menu-list li[class*="active"]>a[class*="menu-item-title"]{
+.common-aside .menu-list .active>.menu-item-title{
 	color: #fff;
-	background-position: 0 -19px,16px -19px;/*注意这里的两个位置信息，如果没有两个backgroud-image 则默认忽略掉多余的,这个特性可以节省代码*/
+	background-position: 0 -16px,16px -16px;/*注意这里的两个位置信息，如果没有两个backgroud-image 则默认忽略掉多余的,这个特性可以节省代码*/
 }
 
 
 /*定义列表项的图标为背景图像 都包裹在<a></a>标签下*/
-.common-aside .menu-list a.ico-report{
-	background: url(../img/aside-report-ico.png) no-repeat left top;
+.common-aside .menu-list .ico-report{
+	background: url(../img/aside-report-ico.png) no-repeat 0 -2px;
 }
-.common-aside .menu-list a.ico-folder{
-	background: url(../img/aside-folder-arrow-ico.png) no-repeat left top,
+.common-aside .menu-list .ico-folder{
+	background: url(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px,
 				url(../img/aside-folder-ico.png) no-repeat 16px 0;
 }
-.common-aside .menu-list a.ico-file{
-	background: url(../img/aside-file-ico.png) no-repeat left top;
+.common-aside .menu-list .ico-file{
+	background: url(../img/aside-file-ico.png) no-repeat 0 -2px;
 }
-.common-aside .menu-list a.ico-favor{
-	background: url(../img/aside-favor-ico.png) no-repeat  left top;
+.common-aside .menu-list .ico-favor{
+	background: url(../img/aside-favor-ico.png) no-repeat  0 -2px;
 }
-.common-aside .menu-list a.ico-share{
-	background: url(../img/aside-share-ico.png) no-repeat  left top;
+.common-aside .menu-list .ico-share{
+	background: url(../img/aside-share-ico.png) no-repeat  0 -2px;
 }
-.common-aside .menu-list a.ico-account{
-	background: url(../img/aside-account-ico.png) no-repeat  left top;
+.common-aside .menu-list .ico-account{
+	background: url(../img/aside-account-ico.png) no-repeat  0 -2px;
 }
 
 /*main 部分*/
