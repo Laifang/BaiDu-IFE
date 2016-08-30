@@ -1,122 +1,137 @@
-body{
-	/*min-width: 1280px;*/
-	width: 1280px;
-	margin: 0 auto;
-	/*font-family: "SimHei";*/
-	background-color: #aaa;
+body {
+    /*min-width: 1280px;*/
+    width: 1280px;
+    margin: 0 auto;
+    /*font-family: "SimHei";*/
+    background-color: #aaa;
 }
+
 
 /* common header 部分*/
 
+.common-header {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    background: #2189bf;
+}
 
-.common-header{
-	position: relative;
-	width: 100%;
-	height: 56px;
-	background: #2189bf;
+.common-header .logo {
+    float: left;
+    height: 36px;
+    width: 36px;
+    margin-left: 50px;
+    margin-top: 10px;
+    background: url(../img/logo.png) no-repeat center;
 }
-.common-header .logo{
-	float: left;
-	height: 36px;
-	width: 36px;
-	margin-left: 50px;
-	margin-top: 10px;
-	background: url(../img/logo.png) no-repeat center;
-}
-.common-header .login-wrap{
-	position: relative;
-	float: right;
-	margin-right: 95px;
-	margin-top: 14px;
-}
-.common-header .search{
-	position: relative;
-	display: inline-block;
-}
-.common-header .search .search-ico{
-	position: relative;
-	left: 35px;
-	top: 5px;
-	height: 18px;
-	width: 18px;
 
+.common-header .login-wrap {
+    position: relative;
+    float: right;
+    margin-right: 95px;
+    margin-top: 14px;
 }
-.common-header .search .search-inp{
-	display: inline-block;
-	height: 28px;
-	width: 312px;
-	border-radius: 30px;
-	border: none;
-	outline: none;
-	text-indent: 32px;
-	font-size: 14px;
+
+.common-header .search {
+    position: relative;
+    display: inline-block;
 }
-.common-header .login{
-	display: inline-block;
-	height: 18px;
-	margin-left: 20px;
-	padding-left: 20px;
-	padding-top: 4px;
-	background: url(../img/login.png) no-repeat left center;
+
+.common-header .search .search-ico {
+    position: relative;
+    left: 35px;
+    top: 5px;
+    height: 18px;
+    width: 18px;
 }
+
+.common-header .search .search-inp {
+    display: inline-block;
+    height: 28px;
+    width: 312px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    text-indent: 32px;
+    font-size: 14px;
+}
+
+.common-header .login {
+    display: inline-block;
+    height: 18px;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 4px;
+    background: url(../img/login.png) no-repeat left center;
+}
+
 
 /*common aside 部分*/
-.common-aside{
-	float: left;
-	width: 20%;
-	height: 1200px;
-	background: #2a2e3d;
+
+.common-aside {
+    float: left;
+    width: 20%;
+    height: 1200px;
+    background: #2a2e3d;
 }
 
-.common-aside .avator-wrap{
-	position: relative;
-	width: 100%;
-	height: 150px;
-}
-.common-aside .avator-wrap .avator{
-	float: left;
-	margin-left: 45px;
-	margin-top: 18px;
-}
-.common-aside .avator-wrap .username{
-	float: left;
-	margin-left: 20px;
-	margin-top: 40px;
-	font-size: 16px;
-	color: #fff;
-}
-.common-aside .user-count{
-	margin-top: 24px;
-	margin-left: 34px;
-	height: 28px;
-	/*width: 168px;*/
-	text-align: center;
-}
-.common-aside .user-count .fans-count,
-.common-aside .user-count .favor-count{
-	float: left;
-	padding: 0 32px;
-	font-size: 12px;
-	color: #6e8095;
+.common-aside .avator-wrap {
+    position: relative;
+    width: 100%;
+    height: 150px;
 }
 
-.common-aside .user-count .favor-count{
-	border-right: 2px solid #6e8095;
+.common-aside .avator-wrap .avator {
+    float: left;
+    margin-left: 45px;
+    margin-top: 18px;
 }
+
+.common-aside .avator-wrap .username {
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.common-aside .user-count {
+    margin-top: 24px;
+    margin-left: 34px;
+    height: 28px;
+    /*width: 168px;*/
+    text-align: center;
+}
+
+.common-aside .user-count .fans-count, .common-aside .user-count .favor-count {
+    float: left;
+    padding: 0 32px;
+    font-size: 12px;
+    color: #6e8095;
+}
+
+.common-aside .user-count .favor-count {
+    border-right: 2px solid #6e8095;
+}
+
 
 /*common aside  menu-list部分*/
 
+
 /*设置根ul 的默认字体颜色和大小*/
-.common-aside .menu-list a{
-	font-size: 12px;
-	color: #6e8095;
+
+.common-aside .menu-list a {
+    font-size: 12px;
+    color: #6e8095;
 }
+
 
 /* 无效
 	设置整个menu-list 距离avator 15px
 .common-aside  .menu-list {
 	margin-top: 15px;
 	} */
+
 
 /*
 -------------------------------------------------------
@@ -125,26 +140,36 @@ body{
 下面一些列选择器的设置都是为了下一步方便后端进行循环
 ----------------------------------------------------------
 */
-.common-aside .menu-list .menu-item{
-	padding-left: 45px;/*增加左边的覆盖面*/
-	padding-top: 15px;/*增大根list之间的间距*/
-	padding-bottom: 15px;/*1.同上2.增加根list的下边的覆盖面*/
+
+.common-aside .menu-list .menu-item {
+    padding-left: 45px;
+    /*增加左边的覆盖面*/
+    padding-top: 15px;
+    /*增大根list之间的间距*/
+    padding-bottom: 15px;
+    /*1.同上2.增加根list的下边的覆盖面*/
 }
 
 
 /*设置子ul列表的左边距 和上边距*/
-.common-aside .menu-list ul[class*="menu-list-"]{
-	margin-left: 25px;
-	margin-top: 20px;
-}
-/*设置 子列表下的li.item 的下边距*/
-.common-aside .menu-list [class*="menu-list-"]>li{
-	margin-bottom: 20px;
+
+.common-aside .menu-list ul[class*="menu-list-"] {
+    margin-left: 25px;
+    margin-top: 20px;
 }
 
+
+/*设置 子列表下的li.item 的下边距*/
+
+.common-aside .menu-list [class*="menu-list-"]>li {
+    margin-bottom: 20px;
+}
+
+
 /*设置 最后一个子列表下的最后一个li.item 的下边归零，实现排版目的*/
-.common-aside .menu-list [class*="menu-list-"]:last-of-type>li:last-of-type{
-	margin-bottom: 0px;
+
+.common-aside .menu-list [class*="menu-list-"]:last-of-type>li:last-of-type {
+    margin-bottom: 0px;
 }
 
 
@@ -153,62 +178,78 @@ body{
 	margin-bottom: 20px;
 }  */
 
+
 /*设置根list.menu-item 的 padding 给图标留下位置*/
-.common-aside .menu-list>li>.menu-item-title{
-	padding-left: 25px;
+
+.common-aside .menu-list>li>.menu-item-title {
+    padding-left: 25px;
 }
 
 
 /*设置子menu-list-* 的padding 给图标留下位置*/
-.common-aside .menu-list [class*="menu-list-"] .menu-item-title{
-	padding-left: 16px;
+
+.common-aside .menu-list [class*="menu-list-"] .menu-item-title {
+    padding-left: 16px;
 }
+
+
 /*设置子menu-list-* 下的a.ico-folder的padding 给两个图标留下位置*/
-.common-aside .menu-list [class*="menu-list-"] .ico-folder{
-	padding-left: 32px;
+
+.common-aside .menu-list [class*="menu-list-"] .ico-folder {
+    padding-left: 32px;
 }
 
 
 /*通过直接后代选择器,设置被'激活' 的根li.menu-item元素的背景高亮显示*/
-.common-aside .menu-list>li.active{
-	background: #383d4e;
+
+.common-aside .menu-list>li.active {
+    background: #383d4e;
 }
 
+
 /*--------------------------------------------------------
-通过选择器的多重组合 精确定位被标记为active的li 下的 a.menu-item-title，使其高亮显示
+通过选择器的多重组合 精确定位被标记为.active的子元素.menu-item-title，使其高亮显示
 -------------------------------------------------------*/
-.common-aside .menu-list .active>.menu-item-title{
-	color: #fff;
-	background-position: 0 -16px,16px -16px;/*注意这里的两个位置信息，如果没有两个backgroud-image 则默认忽略掉多余的,这个特性可以节省代码*/
+
+.common-aside .menu-list .active>.menu-item-title {
+    color: #fff;
+    background-position: 0 -16px, 16px -16px;
+    /*注意这里的两个位置信息，如果没有两个backgroud-image 则默认忽略掉多余的,这个特性可以节省代码*/
 }
 
 
 /*定义列表项的图标为背景图像 都包裹在<a></a>标签下*/
-.common-aside .menu-list .ico-report{
-	background: url(../img/aside-report-ico.png) no-repeat 0 -2px;
+
+.common-aside .menu-list .ico-report {
+    background: url(../img/aside-report-ico.png) no-repeat 0 -2px;
 }
-.common-aside .menu-list .ico-folder{
-	background: url(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px,
-				url(../img/aside-folder-ico.png) no-repeat 16px -2px;
+
+.common-aside .menu-list .ico-folder {
+    background: url(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px, url(../img/aside-folder-ico.png) no-repeat 16px -2px;
 }
-.common-aside .menu-list .ico-file{
-	background: url(../img/aside-file-ico.png) no-repeat 0 -2px;
+
+.common-aside .menu-list .ico-file {
+    background: url(../img/aside-file-ico.png) no-repeat 0 -2px;
 }
-.common-aside .menu-list .ico-favor{
-	background: url(../img/aside-favor-ico.png) no-repeat  0 -2px;
+
+.common-aside .menu-list .ico-favor {
+    background: url(../img/aside-favor-ico.png) no-repeat 0 -2px;
 }
-.common-aside .menu-list .ico-share{
-	background: url(../img/aside-share-ico.png) no-repeat  0 -2px;
+
+.common-aside .menu-list .ico-share {
+    background: url(../img/aside-share-ico.png) no-repeat 0 -2px;
 }
-.common-aside .menu-list .ico-account{
-	background: url(../img/aside-account-ico.png) no-repeat  0 -2px;
+
+.common-aside .menu-list .ico-account {
+    background: url(../img/aside-account-ico.png) no-repeat 0 -2px;
 }
+
 
 /*main 部分*/
 
-.main{
-	float: left;
-	width: 79.9%;
-	height: 1200px;
-	background: #eee;
+.main {
+    float: left;
+    width: 79.9%;
+    height: 1200px;
+    background: #eee;
 }
