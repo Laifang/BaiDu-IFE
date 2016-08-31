@@ -287,77 +287,55 @@ body {
     margin-right: auto;
 }
 
-.shadow {
-    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
-}
 
 
 /*index search info 部分*/
 
 .index-search-info {
     margin-bottom: 10px;
-    /*width: 100%;*/
     height: 55px;
     border: 1px solid #ccc;
     padding: 15px;
     background: #fff;
     color: #aaa;
+
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
 }
 
 .option-wrap {
     position: relative;
     float: left;
-    margin-right: 35px;
+    margin-right: 30px;
 }
 
-.option-wrap label {
-    display: inline-block;
-    /*margin-right: 15px;*/
-}
 
 .option-wrap select, 
-.option-wrap input[type="date"] {
+.option-wrap input{
     box-sizing: border-box;
-    margin-left: 15px;
-    border: 1px solid #ccc;
-    text-indent: 0.5em;
-    line-height: 25px;
+
+    width: 120px;
     height: 25px;
+  
+    margin:0 15px 5px 15px;
+    border: 1px solid #ccc;
+
+    text-indent: 0.5em;
 }
 
-.label-option-01 select, 
-.label-option-05 select, 
-.label-option-06 select {
+.label-option .short{
     width: 70px;
 }
 
-.label-option-02 select, 
-.label-option-03 select, 
-.label-option-04 input,
-.label-option-07 select{
-    width: 120px;
-}
-
-.label-option-03, 
-.label-option-06, 
-.label-option-07 {
-    margin-top: 5px;
-}
-
-#option-wrap-2 {
-    margin-right: 50px;
-}
 
 .ico-replace {
     position: absolute;
-    top: 10px;
-    right: -25px;
+    top: 11px;
+    right: -12px;
+    width: 28px;
+    height: 38px;
+    background: url(../img/index-main-replace.png);
 }
 
-.label-option-04, 
-.label-option-06 {
-    margin-right: 15px;
-}
 
 .index-search-info .btn-search {
     margin-top: 12.5px;
@@ -456,19 +434,14 @@ body {
   background: #fff url(../img/index-main-arrow-r.png) no-repeat center;
 }
 
-.index-search-history .history-search .ico-history{
-  float: left;
-
-  height: 32px;
-  width: 32px;
-  margin-top: 15px;
-  margin-left: 20px;
+.index-search-history .history-search {
+  line-height: 65px;
+  background: #fff url(../img/index-main-history.png) no-repeat 20px 50%;
 }
 
 .index-search-history .history-search p{
   float: left;
-  margin-left: 10px;
-  line-height: 65px;
+  margin-left: 62px;
 }
 
 /*index-report-count 部分*/
@@ -490,16 +463,16 @@ body {
   background-color: #fff;
 }
 
-.index-report-count  .count-item:nth-of-type(1){
+.index-report-count .count-item:nth-of-type(1){
   border-left: 4px solid #43b29e;
 }
-.index-report-count  .count-item:nth-of-type(2){
+.index-report-count .count-item:nth-of-type(2){
   border-left: 4px solid #388ac1;
 }
-.index-report-count  .count-item:nth-of-type(3){
+.index-report-count .count-item:nth-of-type(3){
   border-left: 4px solid #d04b36;
 }
-.index-report-count  .count-item:nth-of-type(4){
+.index-report-count .count-item:nth-of-type(4){
   margin-right: 0;
   border-left: 4px solid #e2cd47;
 }
@@ -527,7 +500,6 @@ body {
 
   margin-right: 15px;
   margin-top: 10px;
-  background: #aaa;
 }
 
 .index-report-count .count-item:nth-of-type(1) .ico-box{
@@ -541,4 +513,95 @@ body {
 }
 .index-report-count .count-item:nth-of-type(4) .ico-box{
   background: #e2cd47;
+}
+
+/*index project view 部分*/
+
+.index-project-view {
+  float: left;
+  width: 530px;
+  height: 355px;
+
+  margin-top: 15px;
+
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+}
+
+.index-project-view .project-title{
+  height: 40px;
+
+  padding-left: 20px;
+  
+  line-height: 40px;
+
+  font-size: 12px;
+  font-weight: normal;
+  color: #aaa;
+
+  background-color: #f4f5f7;
+}
+
+.index-project-view .project-content{
+    margin: 42px 20px 0 20px;
+}
+
+.project-content .project-nav{
+  margin-top: -30px;
+  margin-left: -1px;
+}
+
+.project-content .project-nav-tab{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 85px;
+    height: 30px;
+    
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    
+    line-height: 30px;
+    text-align: center;
+
+    background-color: #ededed;
+}
+.project-content .project-nav .active{
+  background-color: #fff;
+}
+
+.project-content .project-nav-tab:hover{
+  background-color: #fff;
+}
+
+.project-content .table-wrap{
+    border: 1px solid #ccc;
+}
+/*displa:table 默认不显示border 所以包裹一个wrap层显示border*/
+.project-content .project-table{
+    margin:30px auto;
+    text-align: center;
+    /*border: 1px solid #ccc;*/ 
+}
+
+.project-content .project-table tbody{
+    vertical-align: center
+    border: 1px solid #ccc;
+}
+
+.project-table tr,
+.project-table td{
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+.project-table td:hover{
+  background-color: #f4f5f6;
+}
+.project-table .active{
+  background-color: #f4f5f6;
 }

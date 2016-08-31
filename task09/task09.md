@@ -9,6 +9,7 @@
 
 ## 需要记下的知识:
 - `box-sizing` 属性 是内容盒模型 盒子大小等于设置大小，`padding`和`border`被包含在定义的`width`和`height`之内；
+
     
 ```css
     - [tips]:用于解决hover状态文字位置改变的问题
@@ -22,5 +23,7 @@
       border-top:4px solid blue;
     }   
 ```
+
+- 第一项目组 project-view 的nav-tab 实现很巧妙，可以完美解决相邻元素上下border融合的问题，可以记下来
        
     

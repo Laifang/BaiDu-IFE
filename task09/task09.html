@@ -82,85 +82,95 @@
 		</nav>
 
 		<div class="index-main-wrap">
-			<div class="index-search-info shadow">
+			<div class="index-search-info">
 				<form action="#">
-					<div class="option-wrap" id="option-wrap-1">
-						<label class="label-option-01">
+					<div class="option-wrap">
+						<label class="label-option">
 							<span>查询项</span>
-							<select name="option-01" id="">
+							<select id="" class="short">
 								<option>第一项</option>
 								<option>第二项</option>
 								<option>第三项</option>
 							</select>
 						</label>
 					</div>
-					<div class="option-wrap" id="option-wrap-2">
-						<label class="label-option-02">
-							<span>买方</span>
-							<select name="option-02" id="">
-								<option>小A</option>
-								<option selected>小B</option>
-								<option>小C</option>
-							</select>
-						</label>
-						<br>
-						<label class="label-option-03">
-							<span>卖方</span>
-							<select name="option-03" id="">
-								<option>小D</option>
-								<option>小E</option>
-								<option selected>小F</option>
-							</select>
-						</label>
-						<a href="#"><img class="ico-replace" src="img/index-main-replace.png" alt="置换"></a>
+					<div class="option-wrap">
+						<div>
+							<label class="label-option">
+								<span>买方</span>
+								<select id="">
+									<option>小A</option>
+									<option selected>小B</option>
+									<option>小C</option>
+								</select>
+							</label>
+						</div>
+						
+						<div>
+							<label class="label-option">
+								<span>卖方</span>
+								<select id="">
+									<option>小D</option>
+									<option>小E</option>
+									<option selected>小F</option>
+								</select>
+							</label>
+						</div>
+
+						<a href="#" class="ico-replace"></a>
 					</div>
-					<div class="option-wrap" id="option-wrap-3">
-						<label class="label-option-04">
-							<span>日期</span>
-							<input type="date" name="search-date" value="2016-08-30">
-						</label>
 
-						<label class="label-option-05">
-							<span>总耗时</span>
-							<select name="option-05" id="">
-								<option value="">1&nbsp;天</option>
-								<option value="">2&nbsp;天</option>
-								<option value="">3&nbsp;天</option>
-								<option value="">4&nbsp;天</option>
-								<option value="">5&nbsp;天</option>
-								<option value="">6&nbsp;天</option>
-								<option value="">7&nbsp;天</option>
-								<option value="" selected>8&nbsp;天</option>
-							</select>
-						</label>
-						<br>
-						<label class="label-option-06">
-							<span>人数</span>
-							<select name="option-06" id="">
-
-								<option value="">4&nbsp;人</option>
-								<option value="">5&nbsp;人</option>
-								<option value="">6&nbsp;人</option>
-								<option value="">7&nbsp;人</option>
-								<option value="">8&nbsp;人</option>
-								<option value="">9&nbsp;人</option>
-								<option value="" selected>10&nbsp;人</option>
-								<option value="">11&nbsp;人</option>
-							</select>
-						</label>
-						<label class="label-option-07">
-							<span>成交项</span>
-							<select name="option-07" id="">
-								<option value="">4&nbsp;项</option>
-								<option value="">5&nbsp;项</option>
-								<option value="">6&nbsp;项</option>
-								<option value="">7&nbsp;项</option>
-								<option value="">8&nbsp;项</option>
-								<option value="">9&nbsp;项</option>
-								<option value="" selected>10&nbsp;项</option>
-								<option value="">11&nbsp;项</option>
-							</select>
-						</label>
+					<div class="option-wrap">
+						<div>
+							<label class="label-option">
+								<span>日期</span>
+								<input type="date" name="search-date" >
+							</label>
+							
+							<label class="label-option">
+								<span>总耗时</span>
+								<select id="" class="short">
+									<option value="">1&nbsp;天</option>
+									<option value="">2&nbsp;天</option>
+									<option value="">3&nbsp;天</option>
+									<option value="">4&nbsp;天</option>
+									<option value="">5&nbsp;天</option>
+									<option value="">6&nbsp;天</option>
+									<option value="">7&nbsp;天</option>
+									<option value="" selected>8&nbsp;天</option>
+								</select>
+							</label>
+						</div>
+						
+						<div>
+							<label class="label-option">
+								<span>人数</span>
+								<select id="" class="short">
+							
+									<option value="">4&nbsp;人</option>
+									<option value="">5&nbsp;人</option>
+									<option value="">6&nbsp;人</option>
+									<option value="">7&nbsp;人</option>
+									<option value="">8&nbsp;人</option>
+									<option value="">9&nbsp;人</option>
+									<option value="" selected>10&nbsp;人</option>
+									<option value="">11&nbsp;人</option>
+								</select>
+							</label>
+							<label class="label-option">
+								<span>成交项</span>
+								<select id="">
+									<option value="">4&nbsp;项</option>
+									<option value="">5&nbsp;项</option>
+									<option value="">6&nbsp;项</option>
+									<option value="">7&nbsp;项</option>
+									<option value="">8&nbsp;项</option>
+									<option value="">9&nbsp;项</option>
+									<option value="" selected>10&nbsp;项</option>
+									<option value="">11&nbsp;项</option>
+								</select>
+							</label>
+						</div>
 					</div>
 					<button class="btn-search" type="submit">搜索</button>
 				</form>
@@ -199,7 +209,6 @@
 				</div>
 
 				<div class="history-search">
-					<img class="ico-history" src="img/index-main-history.png" alt="历史查询">
 					<p>历史查询</p>
 				</div>
 			</div>
@@ -230,13 +239,66 @@
 					</div>
 			</div>
 
-			<div class="index-project-view shadow"></div>
+			<div class="index-project-view">
+				<h4 class="project-title">第一组项目</h4>
+				<div class="project-content">
+					<div class="table-wrap">
+						<ul class="project-nav">
+						<li class="project-nav-tab active">项目1</li>
+						<li class="project-nav-tab">项目2</li>
+						<li class="project-nav-tab">项目3</li>
+						<li class="project-nav-tab">项目4</li>
+						<li class="project-nav-tab">项目5</li>
+					</ul>
+						<table class="project-table">
+							<tbody>
+								<tr>
+									<td class="active">购买材料01</td>
+									<td>购买材料02</td>
+									<td>购买材料03</td>
+									<td>购买材料04</td>
+								</tr>
+								<tr>
+									<td>购买材料01</td>
+									<td>购买材料02</td>
+									<td>购买材料03</td>
+									<td>购买材料04</td>
+								</tr>
+								<tr>
+									<td>购买材料01</td>
+									<td>购买材料02</td>
+									<td>购买材料03</td>
+									<td>购买材料04</td>
+								</tr>
+								<tr>
+									<td>购买材料01</td>
+									<td>购买材料02</td>
+									<td>购买材料03</td>
+									<td>购买材料04</td>
+								</tr>
+								<tr>
+									<td>购买材料01</td>
+									<td>购买材料02</td>
+									<td>购买材料03</td>
+									<td>购买材料04</td>
+								</tr>
+								<tr>
+									<td>购买材料01</td>
+									<td>购买材料02</td>
+									<td>购买材料03</td>
+									<td>购买材料04</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
 
-			<div class="index-project-detail shadow"></div>
+			<div class="index-project-detail"></div>
 
-			<div class="index-calender shadow"></div>
+			<div class="index-calender"></div>
 
-			<div class="index-charts shadow"></div>
+			<div class="index-charts"></div>
 
 		</div>
 
