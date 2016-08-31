@@ -317,6 +317,7 @@ body {
 
 .option-wrap select, 
 .option-wrap input[type="date"] {
+    box-sizing: border-box;
     margin-left: 15px;
     border: 1px solid #ccc;
     text-indent: 0.5em;
