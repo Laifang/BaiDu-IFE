@@ -315,22 +315,31 @@ body {
     /*margin-right: 15px;*/
 }
 
-.option-wrap select, .option-wrap input[type="text"] {
+.option-wrap select, 
+.option-wrap input[type="date"] {
     margin-left: 15px;
     border: 1px solid #ccc;
     text-indent: 0.5em;
+    line-height: 25px;
     height: 25px;
 }
 
-.label-option-01 select, .label-option-05 select, .label-option-06 select {
+.label-option-01 select, 
+.label-option-05 select, 
+.label-option-06 select {
     width: 70px;
 }
 
-.label-option-02 select, .label-option-03 select, .label-option-07 select {
+.label-option-02 select, 
+.label-option-03 select, 
+.label-option-04 input,
+.label-option-07 select{
     width: 120px;
 }
 
-.label-option-03, .label-option-06, .label-option-07 {
+.label-option-03, 
+.label-option-06, 
+.label-option-07 {
     margin-top: 5px;
 }
 
@@ -344,7 +353,8 @@ body {
     right: -25px;
 }
 
-.label-option-04, .label-option-06 {
+.label-option-04, 
+.label-option-06 {
     margin-right: 15px;
 }
 
@@ -363,54 +373,71 @@ body {
 
 /*index-search-history 部分*/
 
-.index-search-history {
-    /*width: 100%;*/
-    height: 85px;
-    background: transparent;
-}
+ .index-search-history {
+    /*width: 100%;
+    height: 65px;
+    background: transparent;*/
+} 
 
 /*设置整体模块左浮动*/
 
-.index-search-history .navbar, .index-search-history .navbar .navbar-item, .index-search-history .navbar a, .index-search-history .history-search {
+.index-search-history .navbar, 
+.index-search-history .navbar .navbar-item, 
+.index-search-history .navbar a, 
+.index-search-history .history-search {
     float: left;
 }
 
 /*设置模块通用属性*/
 
-.index-search-history .navbar a, .index-search-history .navbar div, .index-search-history .history-search {
-    height: 83px;
+.index-search-history .navbar a, 
+.index-search-history .navbar .navbar-item, 
+.index-search-history .history-search {
+    box-sizing: border-box;
+    height: 65px;
     margin-right: 5px;
     box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
-    border: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top:4px solid #fff;/*设置这冗余的border-top 用于解决hover状态 文字位置改变问题*/
     background-color: #fff;
     text-align: center;
+}
+
+.index-search-history .navbar .active{
+  border-top: 4px solid #4388c9;
+}
+
+.navbar .navbar-item:hover{
+  border-top: 4px solid #4388c9;
 }
 
 /*单独设置每种模块的宽度*/
 
 .index-search-history .navbar .navbar-item {
-    width: 108px;
+    width: 110px;
 }
 
-.index-search-history .navbar a {
-    width: 28px;
+.index-search-history .navbar [class^="navbar-arrow"] {
+    border-top: none;
+    width: 30px;
 }
 
 .index-search-history .history-search {
-    width: 128px;
+    width: 130px;
     margin-right: 0;
 }
 
 /*设置 navbar-item 的样式*/
 
 .navbar .navbar-item h4{
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 12px;
   color: #323333;
 }
 
 .navbar .navbar-item p{
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 21px;
   color: #ec6500;
 }
@@ -418,15 +445,7 @@ body {
   font-size: 12px;
   color: #ccc;
 }
-.navbar div.active{
-  border-top: 4px solid #4388c9;
-  height: 80px;
-}
 
-/*.navbar .navbar-item:hover{
-  border-top: 4px solid #4388c9;
-  height: 80px;
-}*/
 
 .navbar a.navbar-arrow-l{
   background: #fff url(../img/index-main-arrow-l.png) no-repeat center;
@@ -441,14 +460,14 @@ body {
 
   height: 32px;
   width: 32px;
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: 20px;
 }
 
-.index-search-history .history-search h4{
+.index-search-history .history-search p{
   float: left;
   margin-left: 10px;
-  line-height: 85px;
+  line-height: 65px;
 }
 
 /*index-report-count 部分*/
@@ -461,27 +480,26 @@ body {
 
 .index-report-count .count-item{
   float: left;
-  margin-right: 26px;
-  width: 198px;
+  box-sizing: border-box;
+  margin-right: 30px;
+  width: 200px;
   height: 70px;
   box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
   border: 1px solid #ccc;
   background-color: #fff;
 }
-.index-report-count .count-item:last-of-type{
-  margin-right: 0;
-}
 
-.index-report-count  .item-1{
+.index-report-count  .count-item:nth-of-type(1){
   border-left: 4px solid #43b29e;
 }
-.index-report-count  .item-2{
+.index-report-count  .count-item:nth-of-type(2){
   border-left: 4px solid #388ac1;
 }
-.index-report-count  .item-3{
+.index-report-count  .count-item:nth-of-type(3){
   border-left: 4px solid #d04b36;
 }
-.index-report-count  .item-4{
+.index-report-count  .count-item:nth-of-type(4){
+  margin-right: 0;
   border-left: 4px solid #e2cd47;
 }
 
@@ -511,15 +529,15 @@ body {
   background: #aaa;
 }
 
-.index-report-count .count-item .box-1{
+.index-report-count .count-item:nth-of-type(1) .ico-box{
   background: #43b29e;
 }
-.index-report-count .count-item .box-2{
+.index-report-count .count-item:nth-of-type(2) .ico-box{
   background: #388ac1;
 }
-.index-report-count .count-item .box-3{
+.index-report-count .count-item:nth-of-type(3) .ico-box{
   background: #d04b36;
 }
-.index-report-count .count-item .box-4{
+.index-report-count .count-item:nth-of-type(4) .ico-box{
   background: #e2cd47;
 }
