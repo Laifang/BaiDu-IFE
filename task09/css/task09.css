@@ -40,7 +40,7 @@ body {
 .common-header .search .search-ico {
     position: relative;
     left: 35px;
-    top: 5px;
+    top: 4px;
     height: 18px;
     width: 18px;
 }
@@ -150,6 +150,17 @@ body {
     /*1.同上2.增加根list的下边的覆盖面*/
 }
 
+.common-aside .menu-list .menu-item:hover{
+    background-color: #383d4e;
+}
+
+.common-aside .menu-list .menu-item:hover > .menu-item-title{
+    color: #fff;
+    background-position: 0 -16px;
+}
+
+
+
 
 /*设置子ul列表的左边距 和上边距*/
 
@@ -173,15 +184,10 @@ body {
 }
 
 
-/* 无效
-.common-aside .menu-list .menu-item{
-	margin-bottom: 20px;
-    }  */
-
 
 /*设置根list.menu-item 的 padding 给图标留下位置*/
 
-.common-aside .menu-list>li>.menu-item-title {
+.common-aside .menu-list .menu-item .menu-item-title {
     padding-left: 25px;
 }
 
@@ -193,17 +199,10 @@ body {
 }
 
 
-/*设置子menu-list-* 下的a.ico-folder的padding 给两个图标留下位置*/
-
-.common-aside .menu-list [class*="menu-list-"] .ico-folder {
-    padding-left: 32px;
-}
-
-
 /*通过直接后代选择器,设置被'激活' 的根li.menu-item元素的背景高亮显示*/
 
 .common-aside .menu-list>li.active {
-    background: #383d4e;
+    background-color: #383d4e;
 }
 
 
@@ -213,19 +212,30 @@ body {
 
 .common-aside .menu-list .active>.menu-item-title {
     color: #fff;
-    background-position: 0 -16px, 16px -16px;
+    background-position: 0 -16px;
     /*注意这里的两个位置信息，如果没有两个backgroud-image 则默认忽略掉多余的,这个特性可以节省代码*/
 }
+.common-aside .menu-list .active>.menu-arrow {
+    background-position: 0 -16px;
+}
 
+/*定义列表项的图标位置 使用css spirit 技术 */
 
-/*定义列表项的图标为背景图像 都包裹在<a></a>标签下*/
+.common-aside .menu-list-2 .menu-arrow{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  background: url(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px;
+}
 
 .common-aside .menu-list .ico-report {
     background: url(../img/aside-report-ico.png) no-repeat 0 -2px;
 }
 
 .common-aside .menu-list .ico-folder {
-    background: url(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px, url(../img/aside-folder-ico.png) no-repeat 16px -2px;
+    background:url(../img/aside-folder-ico.png) no-repeat 0 -2px;
+     /*-2pxurl(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px,;*/
 }
 
 .common-aside .menu-list .ico-file {
@@ -651,11 +661,12 @@ body {
     margin-top: 5px;
     margin-bottom: 10px;
     color: #aaa;
+    font-weight: normal;
 }
 
 .summary-content p {
     margin-bottom: 10px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .summary-content .title{
@@ -861,24 +872,24 @@ body {
 }
 
 
-
-
 .index-charts .charts .range-panel{
   display: inline-block;
   width: 170px;
-  height: 5px;
   background-color: #ccc;
   margin-left: 17px;
 }
 
+.index-charts .charts .range-panel,
+.index-charts .charts .range{
+    height: 5px;
+}
+
 .charts tbody tr:nth-of-type(even) .range{
   width: 95%;
-  height: 5px;
   background-color: #ff6666;
 }
 .charts tbody tr:nth-of-type(odd) .range{
   width: 75%;
-  height: 5px;
   background-color: #33ccff;
 }
 
