@@ -18,18 +18,18 @@ body {
 
 .common-header .logo {
     float: left;
-    height: 36px;
     width: 36px;
-    margin-left: 50px;
+    height: 36px;
     margin-top: 10px;
+    margin-left: 50px;
     background: url(../img/logo.png) no-repeat center;
 }
 
 .common-header .login-wrap {
     position: relative;
     float: right;
-    margin-right: 95px;
     margin-top: 14px;
+    margin-right: 95px;
 }
 
 .common-header .search {
@@ -40,28 +40,28 @@ body {
 .common-header .search .search-ico {
     position: relative;
     left: 35px;
-    top: 4px;
-    height: 18px;
+    top: 3px;
     width: 18px;
+    height: 18px;
 }
 
 .common-header .search .search-inp {
-    display: inline-block;
-    height: 28px;
-    width: 312px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    text-indent: 32px;
     font-size: 14px;
+    display: inline-block;
+    width: 312px;
+    height: 28px;
+    text-indent: 32px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
 }
 
 .common-header .login {
     display: inline-block;
     height: 18px;
     margin-left: 20px;
-    padding-left: 20px;
     padding-top: 4px;
+    padding-left: 20px;
     background: url(../img/login.png) no-repeat left center;
 }
 
@@ -83,30 +83,31 @@ body {
 
 .common-aside .avator-wrap .avator {
     float: left;
-    margin-left: 45px;
     margin-top: 18px;
+    margin-left: 45px;
 }
 
 .common-aside .avator-wrap .username {
-    float: left;
-    margin-left: 20px;
-    margin-top: 40px;
     font-size: 16px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
     color: #fff;
 }
 
 .common-aside .user-count {
+    height: 28px;
     margin-top: 24px;
     margin-left: 34px;
-    height: 28px;
     /*width: 168px;*/
     text-align: center;
 }
 
-.common-aside .user-count .fans-count, .common-aside .user-count .favor-count {
+.common-aside .user-count .fans-count,
+.common-aside .user-count .favor-count {
+    font-size: 12px;
     float: left;
     padding: 0 32px;
-    font-size: 12px;
     color: #6e8095;
 }
 
@@ -142,47 +143,44 @@ body {
 */
 
 .common-aside .menu-list .menu-item {
-    padding-left: 45px;
     /*增加左边的覆盖面*/
     padding-top: 15px;
     /*增大根list之间的间距*/
     padding-bottom: 15px;
+    padding-left: 45px;
     /*1.同上2.增加根list的下边的覆盖面*/
 }
 
-.common-aside .menu-list .menu-item:hover{
+.common-aside .menu-list .menu-item:hover {
     background-color: #383d4e;
 }
 
-.common-aside .menu-list .menu-item:hover > .menu-item-title{
+.common-aside .menu-list .menu-item:hover> .menu-item-title {
     color: #fff;
     background-position: 0 -16px;
 }
 
 
-
-
 /*设置子ul列表的左边距 和上边距*/
 
-.common-aside .menu-list [class*="menu-list-"] {
-    margin-left: 25px;
+.common-aside .menu-list [class*='menu-list-'] {
     margin-top: 20px;
+    margin-left: 25px;
 }
 
 
 /*设置 子列表下的li.item 的下边距*/
 
-.common-aside .menu-list [class*="menu-list-"]>li {
+.common-aside .menu-list [class*='menu-list-']> li {
     margin-bottom: 20px;
 }
 
 
 /*设置 最后一个子列表下的最后一个li.item 的下边归零，实现排版目的*/
 
-.common-aside .menu-list [class*="menu-list-"]:last-of-type>li:last-of-type {
-    margin-bottom: 0px;
+.common-aside .menu-list [class*='menu-list-']:last-of-type> li:last-of-type {
+    margin-bottom: 0;
 }
-
 
 
 /*设置根list.menu-item 的 padding 给图标留下位置*/
@@ -194,15 +192,15 @@ body {
 
 /*设置子menu-list-* 的padding 给图标留下位置*/
 
-.common-aside .menu-list [class*="menu-list-"] .menu-item-title {
+.common-aside .menu-list [class*='menu-list-'] .menu-item-title {
     padding-left: 16px;
 }
 
 
 /*通过直接后代选择器,设置被'激活' 的根li.menu-item元素的背景高亮显示*/
 
-.common-aside .menu-list>li.active {
-    background-color: #383d4e;
+.common-aside .menu-list> li.active {
+    background: #383d4e;
 }
 
 
@@ -210,23 +208,24 @@ body {
 通过选择器的多重组合 精确定位被标记为.active的子元素.menu-item-title，使其高亮显示
 -------------------------------------------------------*/
 
-.common-aside .menu-list .active>.menu-item-title {
+.common-aside .menu-list .active> .menu-item-title {
     color: #fff;
     background-position: 0 -16px;
-    /*注意这里的两个位置信息，如果没有两个backgroud-image 则默认忽略掉多余的,这个特性可以节省代码*/
 }
+
 .common-aside .menu-list .active>.menu-arrow {
-    background-position: 0 -16px;
+    background-position: 0 -14px;
 }
+
 
 /*定义列表项的图标位置 使用css spirit 技术 */
 
-.common-aside .menu-list-2 .menu-arrow{
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 5px;
-  background: url(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px;
+.common-aside .menu-list-2 .menu-arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    background: url(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px;
 }
 
 .common-aside .menu-list .ico-report {
@@ -234,8 +233,8 @@ body {
 }
 
 .common-aside .menu-list .ico-folder {
-    background:url(../img/aside-folder-ico.png) no-repeat 0 -2px;
-     /*-2pxurl(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px,;*/
+    background: url(../img/aside-folder-ico.png) no-repeat 0 -2px;
+    /*-2pxurl(../img/aside-folder-arrow-ico.png) no-repeat 0 -2px,;*/
 }
 
 .common-aside .menu-list .ico-file {
@@ -272,10 +271,10 @@ body {
 }
 
 .index-main .index-nav .nav-title {
-    margin-left: 30px;
     font-size: 12px;
-    color: #aaa;
     line-height: 32px;
+    margin-left: 30px;
+    color: #aaa;
 }
 
 .index-main .index-nav .nav-title a {
@@ -293,22 +292,20 @@ body {
 .index-main-wrap {
     width: 890px;
     margin-top: 20px;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 }
-
 
 
 /*index search info 部分*/
 
 .index-search-info {
-    margin-bottom: 10px;
     height: 55px;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
     padding: 15px;
-    background: #fff;
     color: #aaa;
-
+    border: 1px solid #ccc;
+    background: #fff;
     box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
 }
 
@@ -318,24 +315,19 @@ body {
     margin-right: 30px;
 }
 
-
-.option-wrap select, 
-.option-wrap input{
+.option-wrap select,
+.option-wrap input {
     box-sizing: border-box;
-
     width: 120px;
     height: 25px;
-  
-    margin:0 15px 5px 15px;
+    margin: 0 15px 5px 15px;
+    text-indent: .5em;
     border: 1px solid #ccc;
-
-    text-indent: 0.5em;
 }
 
-.label-option .short{
+.label-option .short {
     width: 70px;
 }
-
 
 .ico-replace {
     position: absolute;
@@ -346,60 +338,63 @@ body {
     background: url(../img/index-main-replace.png);
 }
 
-
 .index-search-info .btn-search {
-    margin-top: 12.5px;
     width: 50px;
     height: 25px;
+    margin-top: 12.5px;
+    cursor: pointer;
     color: #fff;
-    background: #2189bf;
-    outline: none;
     border: none;
     border-radius: 3px;
-    cursor: pointer;
+    outline: none;
+    background: #2189bf;
 }
 
 
 /*index-search-history 部分*/
 
- .index-search-history {
+.index-search-history {
     /*width: 100%;
     height: 65px;
     background: transparent;*/
-} 
+}
+
 
 /*设置整体模块左浮动*/
 
-.index-search-history .navbar, 
-.index-search-history .navbar .navbar-item, 
-.index-search-history .navbar a, 
+.index-search-history .navbar,
+.index-search-history .navbar .navbar-item,
+.index-search-history .navbar a,
 .index-search-history .history-search {
     float: left;
 }
 
+
 /*设置模块通用属性*/
 
-.index-search-history .navbar a, 
-.index-search-history .navbar .navbar-item, 
+.index-search-history .navbar a,
+.index-search-history .navbar .navbar-item,
 .index-search-history .history-search {
     box-sizing: border-box;
     height: 65px;
     margin-right: 5px;
-    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-    border-top:4px solid #fff;/*设置这冗余的border-top 用于解决hover状态 文字位置改变问题*/
-    background-color: #fff;
     text-align: center;
+    border-top: 4px solid #fff;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    /*设置这冗余的border-top 用于解决hover状态 文字位置改变问题*/
+    background-color: #fff;
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
 }
 
-.index-search-history .navbar .active{
-  border-top: 4px solid #4388c9;
+.index-search-history .navbar .active {
+    border-top: 4px solid #4388c9;
 }
 
-.navbar .navbar-item:hover{
-  border-top: 4px solid #4388c9;
+.navbar .navbar-item:hover {
+    border-top: 4px solid #4388c9;
 }
+
 
 /*单独设置每种模块的宽度*/
 
@@ -407,9 +402,9 @@ body {
     width: 110px;
 }
 
-.index-search-history .navbar [class^="navbar-arrow"] {
-    border-top: none;
+.index-search-history .navbar [class^='navbar-arrow'] {
     width: 30px;
+    border-top: none;
 }
 
 .index-search-history .history-search {
@@ -417,243 +412,324 @@ body {
     margin-right: 0;
 }
 
+
 /*设置 navbar-item 的样式*/
 
-.navbar .navbar-item h4{
-  margin-top: 10px;
-  font-size: 12px;
-  color: #323333;
+.navbar .navbar-item h4 {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #323333;
 }
 
-.navbar .navbar-item p{
-  margin-top: 10px;
-  font-size: 21px;
-  color: #ec6500;
-}
-.navbar .navbar-item p .unit{
-  font-size: 12px;
-  color: #ccc;
+.navbar .navbar-item p {
+    font-size: 21px;
+    margin-top: 10px;
+    color: #ec6500;
 }
 
-
-.navbar a.navbar-arrow-l{
-  background: #fff url(../img/index-main-arrow-l.png) no-repeat center;
-
+.navbar .navbar-item p .unit {
+    font-size: 12px;
+    color: #ccc;
 }
-.navbar a.navbar-arrow-r{
-  background: #fff url(../img/index-main-arrow-r.png) no-repeat center;
+
+.navbar a.navbar-arrow-l {
+    background: #fff url(../img/index-main-arrow-l.png) no-repeat center;
+}
+
+.navbar a.navbar-arrow-r {
+    background: #fff url(../img/index-main-arrow-r.png) no-repeat center;
 }
 
 .index-search-history .history-search {
-  line-height: 65px;
-  background: #fff url(../img/index-main-history.png) no-repeat 20px 50%;
+    line-height: 65px;
+    background: #fff url(../img/index-main-history.png) no-repeat 20px 50%;
 }
 
-.index-search-history .history-search p{
-  float: left;
-  margin-left: 62px;
+.index-search-history .history-search p {
+    float: left;
+    margin-left: 62px;
 }
+
 
 /*index-report-count 部分*/
 
-.index-report-count .count-title{
-  font-size: 12px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+.index-report-count .count-title {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-.index-report-count .count-item{
-  float: left;
-  box-sizing: border-box;
-  margin-right: 30px;
-  width: 200px;
-  height: 70px;
-  box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
-  border: 1px solid #ccc;
-  background-color: #fff;
-}
-
-.index-report-count .count-item:nth-of-type(1){
-  border-left: 4px solid #43b29e;
-}
-.index-report-count .count-item:nth-of-type(2){
-  border-left: 4px solid #388ac1;
-}
-.index-report-count .count-item:nth-of-type(3){
-  border-left: 4px solid #d04b36;
-}
-.index-report-count .count-item:nth-of-type(4){
-  margin-right: 0;
-  border-left: 4px solid #e2cd47;
-}
-
-.index-report-count .count-item .count-item-title{
-
-  margin-left: 8px;
-  margin-top: 20px;
-
-  font-size: 12px;
-  color: #323333;
-}
-.index-report-count .count-item .count-item-content{
-
-  margin-top: 12px;
-  margin-left: 8px;
-
-  font-size: 10px;
-  color: #aaa;
-}
-.index-report-count .count-item .ico-box{
-  float: right;
-  width: 60px;
-  height: 42px;
-
-  margin-right: 15px;
-  margin-top: 10px;
-}
-
-.index-report-count .count-item:nth-of-type(1) .ico-box{
-  background: #43b29e;
-}
-.index-report-count .count-item:nth-of-type(2) .ico-box{
-  background: #388ac1;
-}
-.index-report-count .count-item:nth-of-type(3) .ico-box{
-  background: #d04b36;
-}
-.index-report-count .count-item:nth-of-type(4) .ico-box{
-  background: #e2cd47;
-}
-
-/*index project view 部分*/
-
-.index-project-view {
-  float: left;
-  box-sizing: border-box;
-  width: 530px;
-  height: 355px;
-  
-  margin-top: 15px;
-
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
-}
-
-.index-project-view .project-title{
-  height: 40px;
-  
-  padding-left: 20px;
-  
-  line-height: 40px;
-
-  font-size: 12px;
-  font-weight: normal;
-  color: #aaa;
-
-  background-color: #f4f5f7;
-}
-
-.index-project-view .project-content{
-    margin: 42px 20px 0 20px;
-}
-
-.project-content .project-nav{
-  margin-top: -30px;
-  margin-left: -1px;
-}
-
-.project-content .project-nav-tab{
-    display: inline-block;
-    box-sizing: border-box;
-    width: 85px;
-    height: 30px;
-    
-    margin-right: 5px;
-    border: 1px solid #ccc;
-    border-bottom: none;
-    
-    line-height: 30px;
-    text-align: center;
-
-    background-color: #ededed;
-}
-.project-content .project-nav .active{
-  background-color: #fff;
-}
-
-.project-content .project-nav-tab:hover{
-  background-color: #fff;
-}
-
-.project-content .table-wrap{
-    border: 1px solid #ccc;
-}
-/*displa:table 默认不显示border 所以包裹一个wrap层显示border*/
-.project-content .project-table{
-    margin:30px auto;
-    text-align: center;
-    /*border: 1px solid #ccc;*/ 
-}
-
-.project-content .project-table tbody{
-    vertical-align: center
-    border: 1px solid #ccc;
-}
-
-.project-table tr,
-.project-table td{
-    box-sizing: border-box;
-    width: 100px;
-    height: 30px;
-    border: 1px solid #ccc;
-}
-
-.project-table td:hover{
-  background-color: #f4f5f6;
-}
-.project-table .active{
-  background-color: #f4f5f6;
-}
-
-/* project summary 部分*/
-
-.index-project-summary{
-
+.index-report-count .count-item {
     float: left;
     box-sizing: border-box;
-    width: 335px;
-    height: 355px;
-    margin-left: 24px;
-    margin-top: 15px;
+    width: 200px;
+    height: 70px;
+    margin-right: 30px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+}
 
+.index-report-count .count-item:nth-of-type(1) {
+    border-left: 4px solid #43b29e;
+}
+
+.index-report-count .count-item:nth-of-type(2) {
+    border-left: 4px solid #388ac1;
+}
+
+.index-report-count .count-item:nth-of-type(3) {
+    border-left: 4px solid #d04b36;
+}
+
+.index-report-count .count-item:nth-of-type(4) {
+    margin-right: 0;
+    border-left: 4px solid #e2cd47;
+}
+
+.index-report-count .count-item .count-item-title {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 8px;
+    color: #323333;
+}
+
+.index-report-count .count-item .count-item-content {
+    font-size: 10px;
+    margin-top: 12px;
+    margin-left: 8px;
+    color: #aaa;
+}
+
+.index-report-count .count-item .ico-box {
+    float: right;
+    width: 60px;
+    height: 42px;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+
+.index-report-count .count-item:nth-of-type(1) .ico-box {
+    background: #43b29e;
+}
+
+.index-report-count .count-item:nth-of-type(2) .ico-box {
+    background: #388ac1;
+}
+
+.index-report-count .count-item:nth-of-type(3) .ico-box {
+    background: #d04b36;
+}
+
+.index-report-count .count-item:nth-of-type(4) .ico-box {
+    background: #e2cd47;
+}
+
+.index-project-view {
+    float: left;
+    box-sizing: border-box;
+    width: 530px;
+    height: 355px;
+    margin-top: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
     box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
 }
 
-
-.index-project-summary .summary-title{
+.index-project-view .project-title {
     font-size: 12px;
     font-weight: normal;
     line-height: 40px;
-
     height: 40px;
     padding-left: 20px;
+    color: #aaa;
+    background-color: #f4f5f7;
+}
 
+.index-project-view .project-content {
+    margin: 42px 20px 0 20px;
+}
+
+.project-content .project-nav {
+    margin-top: -30px;
+    margin-left: -1px;
+}
+
+.project-content .project-nav-tab {
+    line-height: 30px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 85px;
+    height: 30px;
+    margin-right: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background-color: #ededed;
+}
+
+.project-content .project-nav .active {
+    background-color: #fff;
+}
+
+.project-content .project-nav-tab:hover {
+    background-color: #fff;
+}
+
+.project-content .table-wrap {
+    border: 1px solid #ccc;
+}
+
+
+/*displa:table 默认不显示border 所以包裹一个wrap层显示border*/
+
+.project-content .project-table {
+    margin: 30px auto;
+    text-align: center;
+    /*border: 1px solid #ccc;*/
+}
+
+.project-content .project-table tbody {
+    vertical-align: center border: 1px solid #ccc;
+}
+
+.project-table tr,
+.project-table td {
+    box-sizing: border-box;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+.project-table td:hover {
+    background-color: #f4f5f6;
+}
+
+.project-table .active {
+    background-color: #f4f5f6;
+}
+
+
+/* project summary 部分*/
+
+.index-project-summary {
+    float: left;
+    box-sizing: border-box;
+    width: 335px;
+    height: 355px;
+    margin-left: 24px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+}
+
+.index-project-summary .summary-content {
+    width: 280px;
+    margin: 15px auto;
+}
+
+.summary-content h4,
+.summary-content p {
+    text-indent: 15px;
+}
+
+.summary-content h4 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+.summary-content p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.summary-content .title {
+    border-bottom: 1px solid #ccc;
+}
+
+.summary-content .price-author .price,
+.summary-content .price-author .author {
+    float: left;
+}
+
+.summary-content .price-author {
+    border-bottom: 1px solid #ccc;
+}
+
+.summary-content .price-author .price {
+    border-right: 1px solid #ccc;
+    padding-right: 50px;
+}
+
+.summary-content .detail {
+    height: 150px;
+    border-bottom: 1px solid #ccc;
+}
+
+.index-project-summary .keep-secret {
+    margin-top: 5px;
+}
+
+.keep-secret i {
+    margin-left: 5px;
+    font-style: normal;
+    color: #aaa;
+}
+
+.keep-secret button {
+    float: right;
+    width: 50px;
+    height: 25px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #388ac1;
+    cursor: pointer;
+}
+
+.project-table .active {
+    background-color: #f4f5f6;
+}
+
+
+/* project summary 部分*/
+
+.index-project-summary {
+    float: left;
+    box-sizing: border-box;
+    width: 335px;
+    height: 355px;
+    margin-left: 24px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+}
+
+.index-project-summary .summary-title {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 40px;
+    height: 40px;
+    padding-left: 20px;
     color: #aaa;
     background-color: #f4f5f7;
 }
 
 .index-project-summary .summary-content {
     width: 280px;
-    margin:15px auto;
+    margin: 15px auto;
 }
 
 .summary-content h4,
-.summary-content p{
+.summary-content p {
     text-indent: 15px;
 }
 
@@ -669,39 +745,40 @@ body {
     /*font-weight: bold;*/
 }
 
-.summary-content .title{
+.summary-content .title {
     border-bottom: 1px solid #ccc;
 }
 
 .summary-content .price-author .price,
-.summary-content .price-author .author{
+.summary-content .price-author .author {
     float: left;
 }
 
 .summary-content .price-author {
     border-bottom: 1px solid #ccc;
 }
-.summary-content .price-author .price{
+
+.summary-content .price-author .price {
     border-right: 1px solid #ccc;
     padding-right: 50px;
 }
-.summary-content .detail{
+
+.summary-content .detail {
     height: 150px;
     border-bottom: 1px solid #ccc;
 }
 
-
-.index-project-summary  .keep-secret{
-        margin-top: 5px;
+.index-project-summary .keep-secret {
+    margin-top: 5px;
 }
 
-.keep-secret i{
+.keep-secret i {
     margin-left: 5px;
     font-style: normal;
     color: #aaa;
 }
 
-.keep-secret button{
+.keep-secret button {
     float: right;
     width: 50px;
     height: 25px;
@@ -711,185 +788,182 @@ body {
     color: #fff;
     font-weight: bold;
     background-color: #388ac1;
-
     cursor: pointer;
 }
 
+
 /*index calender 部分*/
 
-.index-calender{
-  float: left;
-  box-sizing: border-box;
-  width: 350px;
-  height: 355px;
-
-  margin-top: 15px;
-
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+.index-calender {
+    float: left;
+    box-sizing: border-box;
+    width: 350px;
+    height: 355px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
 }
 
-.index-calender .calender-title{
-  height: 40px;
-
-  padding-left: 20px;
-  
-  line-height: 40px;
-
-  font-size: 12px;
-  font-weight: normal;
-  color: #aaa;
-
-  background-color: #f4f5f7;
+.index-calender .calender-title {
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #aaa;
+    background-color: #f4f5f7;
 }
 
-.index-calender .date-select{
+.index-calender .date-select {
     width: 310px;
-    margin:10px auto;
+    margin: 10px auto;
 }
 
 .index-calender .date-select select,
-.index-calender .date-select button{
+.index-calender .date-select button {
     display: inline-block;
     width: 24%;
     height: 20px;
     border: 1px solid #a9a9a9;
 }
 
-.index-calender .date-select .btn-today{
-  box-sizing: border-box;
-  
-  outline: none;
-  background: #fff;
-  cursor: pointer;
+.index-calender .date-select .btn-today {
+    box-sizing: border-box;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
 }
 
-.index-calender .date-select .btn-today:hover{
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  /*background: #aaa;*/
-}
-.index-calender .date-select .btn-today:active{
-  border: 1px solid #a9a9a9;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  /*background: #666;*/
-}
-.index-calender .calender{
-  width: 310px;
-  margin:10px auto;
-}
-.index-calender .calender .calender-week{
-  border-top: 1px solid #a9cfec;
-  border-bottom: 1px solid #ccc;
+.index-calender .date-select .btn-today:hover {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    /*background: #aaa;*/
 }
 
-.index-calender .calender th{
-  width: 40px;
-  height: 30px;
+.index-calender .date-select .btn-today:active {
+    border: 1px solid #a9a9a9;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    /*background: #666;*/
 }
 
-.index-calender .calender td{
-  width: 40px;
-  height: 40px;
-  text-align: center;
+.index-calender .calender {
+    width: 310px;
+    margin: 10px auto;
 }
+
+.index-calender .calender .calender-week {
+    border-top: 1px solid #a9cfec;
+    border-bottom: 1px solid #ccc;
+}
+
+.index-calender .calender th {
+    width: 40px;
+    height: 30px;
+}
+
+.index-calender .calender td {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
 .index-calender .calender th,
-.index-calender .calender td{
-  box-sizing: border-box;
-  /*border: 1px solid #fff;*/
+.index-calender .calender td {
+    box-sizing: border-box;
+    /*border: 1px solid #fff;*/
 }
-.index-calender .calender td h4{
-  margin-bottom: 5px;
+
+.index-calender .calender td h4 {
+    margin-bottom: 5px;
 }
+
 
 /*.index-calender .calender th:hover,*/
-.index-calender .calender td:hover{
-  outline: 1px solid #f7d155;
-  background-color: #f4f5f7;
+
+.index-calender .calender td:hover {
+    outline: 1px solid #f7d155;
+    background-color: #f4f5f7;
 }
+
 
 /* index charts 部分 */
 
-.index-charts{
-  float: left;
-  box-sizing: border-box;
-  width: 530px;
-  height: 355px;
-
-  margin-top: 15px;
-  margin-left: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
+.index-charts {
+    float: left;
+    box-sizing: border-box;
+    width: 530px;
+    height: 355px;
+    margin-top: 15px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -3px 3px 7px -4px rgba(0, 0, 0, .6);
 }
 
-.index-charts .charts-title{
-  height: 40px;
-
-  padding-left: 20px;
-  
-  line-height: 40px;
-
-  font-size: 12px;
-  font-weight: normal;
-  color: #aaa;
-
-  background-color: #f4f5f7;
+.index-charts .charts-title {
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #aaa;
+    background-color: #f4f5f7;
 }
 
-.index-charts .charts{
-  margin: 12px auto;
-  border: 1px solid #ccc ;
-  text-align: center;
+.index-charts .charts {
+    margin: 12px auto;
+    border: 1px solid #ccc;
+    text-align: center;
 }
 
 .index-charts .charts th,
-.index-charts .charts td{
-  height: 25px;
+.index-charts .charts td {
+    height: 25px;
 }
 
-.index-charts .charts tr:hover{
-  background-color: #f4f5f7;
+.index-charts .charts tr:hover {
+    background-color: #f4f5f7;
 }
+
 .index-charts .charts .rank,
-.charts tbody tr> td:nth-of-type(1){
-  width: 70px;
+.charts tbody tr> td:nth-of-type(1) {
+    width: 70px;
 }
 
 .index-charts .charts .brand,
-.charts tbody tr> td:nth-of-type(2){
-  width: 90px;
+.charts tbody tr> td:nth-of-type(2) {
+    width: 90px;
 }
+
 .index-charts .charts .index-number,
-.charts tbody tr> td:nth-of-type(3){
-  width: 290px;
-  text-align: left;
-  text-indent: 30px;
+.charts tbody tr> td:nth-of-type(3) {
+    width: 290px;
+    text-align: left;
+    text-indent: 30px;
 }
 
-
-.index-charts .charts .range-panel{
-  display: inline-block;
-  width: 170px;
-  background-color: #ccc;
-  margin-left: 17px;
+.index-charts .charts .range-panel {
+    display: inline-block;
+    width: 170px;
+    background-color: #ccc;
+    margin-left: 17px;
 }
 
 .index-charts .charts .range-panel,
-.index-charts .charts .range{
+.index-charts .charts .range {
     height: 5px;
 }
 
-.charts tbody tr:nth-of-type(even) .range{
-  width: 95%;
-  background-color: #ff6666;
-}
-.charts tbody tr:nth-of-type(odd) .range{
-  width: 75%;
-  background-color: #33ccff;
+.charts tbody tr:nth-of-type(even) .range {
+    width: 95%;
+    background-color: #ff6666;
 }
 
+.charts tbody tr:nth-of-type(odd) .range {
+    width: 75%;
+    background-color: #33ccff;
+}
