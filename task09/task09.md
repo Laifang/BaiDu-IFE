@@ -25,12 +25,4 @@
       border-top:4px solid blue;
     }   
 ```
-
-<<<<<<< HEAD
-- 第一项目组 project-view 的nav-tab 实现很巧妙，可以完美解决相邻元素上下border融合的问题，可以记下来
-=======
 - 第一项目组 project-view 的nav-tab 实现很巧妙，通过在wrap内部的div设置负值的`margin-top`,覆盖掉wrap的border,可以完美解决相邻元素上下border融合的问题，可以记下来
-       
-    
-
->>>>>>> 5fe9eea9780922fe0d77c8a2764bacbf22ae6557
